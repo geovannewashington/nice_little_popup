@@ -7,6 +7,7 @@ html {
 }
 
 /* CSS GENERAL RESET */
+
 * {
         margin: 0;
         padding: 0;
@@ -41,4 +42,48 @@ html {
         color: #fff;
         border: 2px solid #fff;
         font-size: 40px;
+}
+
+.pop-up {
+        position: absolute;
+        width: 400px;
+        background-color: #fff;
+        border-radius: 6px;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.1);
+        text-align: center;
+        padding: 0 30px 30px;
+        visibility: hidden;
+        transition: transform 0.4s ease-out, top 0.4s ease-out;
+}
+
+.show-popup {
+        top: 50%;
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(1);
+}
+
+.pop-up img {
+        position: fixed;
+        width: 100px;
+        margin-top: -50px;
+        border-radius: 50%;
+        transform: translate(-50%, -30%);
+        cursor: pointer;
+        transition: transform 0.1s ease-in-out, width 0.1s ease-out;
+}
+
+.pop-up img:hover {
+        width: 120px;
+}
+
+.pop-up h2 {
+        font-size: 38px;
+        font-weight: bold;
+        margin: 30px 0 10px;
+}
+
+.pop-up p {
+        margin-bottom: 20px;
 }
